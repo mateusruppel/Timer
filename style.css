@@ -33,7 +33,7 @@ grid-column-end: 2;
 h1, p, button {
     display: inline;
     font-size: 2vw;
-    padding: 5px;
+    padding: 4px;
     margin: 0;
 }
 p{
