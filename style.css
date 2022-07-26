@@ -1,0 +1,154 @@
+html , body{
+    background-color: #1E1E1E;
+    margin: 0px;
+    padding: 0px;
+    color: rgb(249, 249, 255);
+}
+
+div.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 4fr;
+    grid-template-rows: 2vh 8vh 30vh 50vh;
+}
+
+header{
+    width: 100%;
+    height: 100%;
+    background-color: #FF3E3E;
+    grid-row: 1/3;
+    grid-column: 1/4;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+/* grid-row: 1/3;
+grid-row-end: 1;
+grid-column-start: 2;
+grid-column-end: 2;
+}
+*/
+
+h1, p, button {
+    display: inline;
+    font-size: 2vw;
+    padding: 5px;
+    margin: 0;
+}
+p{
+    background-color: white;
+    
+}
+h1#aa{
+    margin: 0 auto;
+    text-align: center;
+    position: absolute;
+    font-size: 2.5vw;
+    top:50%;
+    left: 50%;
+    transform: translate(-50% , -50%)
+}
+
+
+h1#right{
+    margin-left: auto;
+    padding: 5px 1rem;
+}
+
+main{
+    width: 100%;
+    background-color: #1E1E1E;
+    grid-row: 3/5;
+    margin : 0 auto;
+    grid-column : 1/4;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    font-size: 100px;
+    
+}
+
+main > h1{
+    
+    background-color: rgba(0, 0, 255, 0);
+    border: solid 3px #FF6A6A;
+    color: rgb(179, 179, 255);
+    grid-row: 2/4;
+    margin : auto;
+    grid-column : 1/4;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    font-size: 17vw;
+    position: relative;
+    padding: 2vw;
+    font-family: "Alarm-clock";
+  }
+  
+  main > h1::before {
+    display: flex;
+    grid-row: 2/4;
+    
+    width: 100%;
+    font-size: 5vw;
+    position: absolute;
+    bottom: 25vw;
+    content: attr(data-content);
+    justify-content: center;
+    font-family: "larm-clock";
+}
+
+button#time-page-button{
+    
+    border : solid 1px #ffa2a2;
+    border-bottom : solid 1px #ffa2a21c;
+    background-color : #ff5353;
+    border-top-left-radius : 5px;
+    border-top-right-radius : 5px;
+    height: 100%;
+    align-items: center;
+    
+    color: whitesmoke;
+    margin-right: 0.2vw;
+    width:  20vw;
+    
+}
+
+button#time-page-button:hover{
+    
+    border : solid 1px #808080;
+    
+    
+}
+
+button#times-page-button{
+    color: whitesmoke;
+    
+    border : solid 1px #ffa2a2;
+    border-bottom : solid 1px #ffa2a21c;
+    background-color : #ff5353;
+    border-top-left-radius : 5px;
+    border-top-right-radius : 5px;
+    height: 100%;
+    align-items: center;
+    /*  grid-column: 1/3;*/
+    width:  20vw;
+    
+    
+}
+button#times-page-button:hover{
+    border : solid 1px #808080;
+}
+
+aside{
+    height: 10%;
+    width: 200%;
+    background-color : pink;
+    grid-row: 2/4;
+}
+
+@font-face {
+    font-family: "Alarm-clock";
+     src: url("../grid/alarm_clock/alarm\ clock.ttf")
+  }
