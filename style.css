@@ -73,7 +73,7 @@ main > h1{
     
     background-color: rgba(0, 0, 255, 0);
     border: solid 3px #FF6A6A;
-    color: rgb(179, 179, 255);
+    color: rgb(255, 255, 255);
     grid-row: 2/4;
     margin : auto;
     grid-column : 1/4;
