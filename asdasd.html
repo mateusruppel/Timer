@@ -1,0 +1,132 @@
+<html>
+<head>
+<script type="text/javascript">
+var currentH , currentS , currentM
+var saveH , saveS , saveM
+
+
+var temps = 0
+var tempm = 10
+var temph = 0
+function time()
+{
+today=new Date();
+currentH=today.getHours();
+currentM =today.getMinutes();
+currentS = today.getSeconds();
+
+
+a();
+document.getElementById('txt').innerHTML=currentH+":"+currentM +":"+currentS;
+setTimeout('time()',500);
+
+}
+
+function desligou(){
+    alert('AAAAAAAAAAAAAAAAAA')
+}
+
+function a(){
+
+    
+    
+    var ttc = currentS + (currentM  * 60) +(currentH  * 3600);
+    var tts = saveS + (saveM  * 60) +(saveH  * 3600);
+
+    var ttt = temps + (tempm  * 60) +(temph  * 3600);
+    // 4000 % 3600 =
+    
+    //if  current time 600 %% save 80000  600 - 8000  
+
+    var tt;
+    const secDay = 24*3600
+
+    //0:10 é menor 23:50
+    // 600 + secDay - 85800
+
+
+    
+
+    if(ttc < tts) {
+        
+        tt = ttc + secDay - tts 
+        console.log("menor. funcionou?")
+    }
+
+    else
+    {
+        tt = ttc - tts
+
+        console.log("maior")
+    }   
+
+    
+    /*
+    
+    if(ttt < tts) {
+        
+        tt = ttt + secDay - tts 
+        console.log("menor. funcionou?")
+    }
+
+    else
+    {
+        tt = ttt - tts
+
+        console.log("maior")
+    }   
+
+*/
+    
+    var s,m,h
+    h = Math.floor(tt / 3600)
+    m = Math.floor((tt % 3600) / 60)
+    s = Math.floor((tt % 3600) % 60)
+    
+
+
+
+    _h = currentH - saveH
+    _m = currentM  - saveM 
+    _s =  currentS - saveS 
+    
+    /*console.log("Tempo inicial : " + saveH + ":"  + saveM + ":" + saveS + " tempo final : " +
+    currentH + ":" + currentM + ":" + currentS + "         diferença "+ _m  + " " + _s)*/
+
+    document.getElementById('txt2').innerHTML= h +":"+m +":"+s;
+    document.getElementById('txt3').innerHTML= saveH +":"+saveM +":"+saveS;
+    
+    document.getElementById('txt4').innerHTML= temph +":"+tempm +":"+temps;
+    
+
+
+/*
+    console.log(tt + " tt")
+    console.log(h + " h")
+    console.log(m + "m")
+    console.log(s + "s")
+*/
+
+}
+
+function saveTime(){
+
+    saveS = currentS
+    saveM = currentM;
+    saveH = currentH
+ //   console.log("aaaaaaaaaaaa" + currentH + " " + currentM  + " " + currentS)
+ //   console.log("bbbbbbbbbb" + saveH + " " + saveM  + " " + saveS)
+}
+
+
+</script>
+</head>
+<body onload="time(); saveTime()" onunload="desligou()">
+<div id="txt"></div>
+<div id="txt2"></div>
+<div id="txt3"></div>
+<div id="txt4"></div>
+<button onclick="a()">aaaa</button>
+<button onclick="saveTime()">aaaa</button>
+</body>
+</html>

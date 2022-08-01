@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
-<body>
+<body onload="time(); saveTime()" >
     <button id="time-page-button" onclick="hide(true, 'myDIV');" >Tempo</button>
     <button id="times-page-button"onclick="hide(false , 'myDIV');" >Tempos Salvo</button>
     <div class="container" id="myDIV">
@@ -25,5 +25,15 @@
         </main>
         <footer id="footer"></footer>
     </div>
+    <div class="container2">
+        <div id="txt"></div>
+    <div id="txt2"></div>
+    <div id="txt3"></div>
+    <div id="txt4"></div>
+    <button onclick="a()">aaaa</button>
+    <button onclick="saveTime()">aaaa</button>
+    </div>
+
+
 </body>
 </html>
